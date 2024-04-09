@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Data from MySQL Table</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>client_number</th>
+        <th>message</th>
+        <th>timestamp</th>
+        <th>response</th>
+      </tr>
+      {% for row in data %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </body>
+</html>
