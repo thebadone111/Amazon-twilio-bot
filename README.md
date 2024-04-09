@@ -1,5 +1,7 @@
 Automatic Bot which answers prompts sent over sms or whatsapp and give product recommendations.
 
+This is an old project newly uploaded. 
+
 Description:
 Flask app webhook for twilio.
 When recieves a prompt, uses ChatGPT to find products
